@@ -1,12 +1,14 @@
-package com.ticonsys.basictestingdemo
+package com.ticonsys.basictestingdemo.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ticonsys.basictestingdemo.ParticipantAdapter
+import com.ticonsys.basictestingdemo.R
+import com.ticonsys.basictestingdemo.RemoteParticipant
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
