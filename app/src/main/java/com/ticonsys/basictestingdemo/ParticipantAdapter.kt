@@ -1,14 +1,17 @@
 package com.ticonsys.basictestingdemo
 
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.simple_participant_item.view.*
 
 class ParticipantAdapter(
-
+    private val width: Int,
+    private val height: Int
 ) : RecyclerView.Adapter<ParticipantAdapter.ParticipantViewHolder>() {
 
     private val differCallback = object : DiffUtil.ItemCallback<RemoteParticipant>() {
@@ -32,6 +35,12 @@ class ParticipantAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParticipantViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.simple_participant_item, parent, false)
+        view.flRoot.post {
+            view.flRoot.layoutParams.height = this.width/2
+            view.flRoot.layoutParams.width = (width-4)/2
+//            view.flRoot.layoutParams.height = parent.width/3
+            view.flRoot.requestLayout()
+        }
         return ParticipantViewHolder(view)
     }
 
