@@ -46,7 +46,7 @@ object AppModule {
     fun provideDefaultShoppingRepository(
         dao: ShoppingDao,
         pixabyApiService: PixabyApiService
-    ) = DefaultShoppingRepository(dao, pixabyApiService) as ShoppingRepository
+    ): ShoppingRepository = DefaultShoppingRepository(dao, pixabyApiService)
 
 
 

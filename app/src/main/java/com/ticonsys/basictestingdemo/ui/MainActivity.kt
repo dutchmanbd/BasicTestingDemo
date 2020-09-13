@@ -12,8 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ticonsys.basictestingdemo.ParticipantAdapter
 import com.ticonsys.basictestingdemo.R
 import com.ticonsys.basictestingdemo.RemoteParticipant
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
 //    private val pAdapter by lazy {
@@ -45,6 +48,8 @@ class MainActivity : AppCompatActivity() {
 //        return (px / Resources.getSystem().displayMetrics.density).toInt()
 //    }
 
+    @Inject
+    lateinit var viewModel: ShoppingViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
