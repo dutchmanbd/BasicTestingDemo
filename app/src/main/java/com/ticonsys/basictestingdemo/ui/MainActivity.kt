@@ -48,10 +48,14 @@ class MainActivity : AppCompatActivity() {
 //        return (px / Resources.getSystem().displayMetrics.density).toInt()
 //    }
 
-    @Inject
-    lateinit var viewModel: ShoppingViewModel
+//    @Inject
+//    lateinit var viewModel: ShoppingViewModel
+//
+//    @Inject
+//    lateinit var fragmentFactory: ShoppingFragmentFactory
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        supportFragmentManager.fragmentFactory = fragmentFactory
         setContentView(R.layout.activity_main)
 
 //        setupRecyclerView()

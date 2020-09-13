@@ -8,9 +8,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+<!--    <com.google.android.material.textfield.TextInputEditText-->
+<!--        android:id="@+id/etPhoneNumber"-->
+<!--        android:inputType="phone"-->
+<!--        android:maxLength="13"-->
+<!--        android:digits="1234567890-"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etPhoneNumber"
         android:inputType="phone"
+        android:maxLength="13"
+        android:digits="1234567890-*"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
